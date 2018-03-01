@@ -1,0 +1,10 @@
+FROM centos:6.7
+MAINTAINER wudeng256@gmail.com
+
+ENV LANG="en_US.UTF-8"
+
+COPY esl-erlang_16.b.3-1~centos~6_amd64.rpm esl-erlang_16.b.3-1~centos~6_amd64.rpm
+
+RUN yum install -y esl-erlang_16.b.3-1~centos~6_amd64.rpm
+
+CMD ["erl"]
