@@ -31,7 +31,7 @@ RUN set -xe \
     && rm otp-src.tar.gz \
     && cd /usr/src/otp-src \
     && ./otp_build autoconf \
-    && ./configure --disable-dynamic-ssl-lib --with-ssl=/usr/ --enable-smp-support --without-terrmcap \
+    && ./configure --disable-dynamic-ssl-lib --with-ssl=/usr/ --enable-smp-support \
     && make \
     && make install \
     && find /usr/local -name examples | xargs rm -rf \
